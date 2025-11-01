@@ -374,7 +374,10 @@ export default function PricingToggle() {
                   </div>
                 )}
                 
-                <offer.icon size={40} className="mb-3 md:w-12 md:h-12" />
+                <div className="relative mb-3">
+                  <div className="absolute inset-0 bg-white/30 rounded-full blur-xl animate-ping"></div>
+                  <offer.icon size={40} className="relative md:w-12 md:h-12 drop-shadow-2xl hover:scale-125 hover:rotate-12 transition-all duration-700 ease-out" />
+                </div>
                 <h3 className="text-lg md:text-2xl font-bold mb-2">{offer.name}</h3>
                 
                 {/* Prix avec barré pour abonnements */}
