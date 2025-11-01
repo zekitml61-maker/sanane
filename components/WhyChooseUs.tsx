@@ -94,55 +94,55 @@ export default function WhyChooseUs() {
         </div>
 
         {/* 4 arguments en grille */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {/* Argument 1 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Clock className="text-white" size={28} />
+          <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+              <Clock className="text-white" size={24} />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">
+            <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2">
               Économie de temps
             </h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-xs md:text-sm">
               Plus de trajet au pressing. On s'occupe de tout !
             </p>
           </div>
 
           {/* Argument 2 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
-            <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <TrendingDown className="text-white" size={28} />
+          <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+              <TrendingDown className="text-white" size={24} />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">
+            <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2">
               Prix transparent
             </h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-xs md:text-sm">
               Tarif fixe mensuel. Aucun surcoût caché.
             </p>
           </div>
 
           {/* Argument 3 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
-            <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Package className="text-white" size={28} />
+          <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+              <Package className="text-white" size={24} />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">
+            <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2">
               Service tout-en-un
             </h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-xs md:text-sm">
               Collecte + nettoyage + livraison. Tout inclus !
             </p>
           </div>
 
           {/* Argument 4 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
-            <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Shield className="text-white" size={28} />
+          <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+              <Shield className="text-white" size={24} />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">
+            <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2">
               Qualité garantie
             </h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-xs md:text-sm">
               Satisfaction 100% ou remboursé. Sans condition.
             </p>
           </div>
