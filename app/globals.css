@@ -171,12 +171,6 @@ body {
     animation: scroll 20s linear infinite;
   }
   
-  /* Masque de fade pour le contenu qui remonte */
-  .page-fade-mask {
-    mask-image: linear-gradient(to bottom, transparent 0%, transparent 100px, black 200px);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 100px, black 200px);
-  }
-  
   @keyframes float-premium {
     0%, 100% {
       transform: translateY(0px) scale(1);
