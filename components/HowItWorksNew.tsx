@@ -251,35 +251,15 @@ export default function HowItWorksNew() {
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full md:hidden pointer-events-none">
                     {/* Ligne principale */}
                     <div 
-                      className="relative w-0.5 bg-gradient-to-b from-primary-500 via-blue-500 to-blue-400 rounded-full"
                       style={{
+                        width: '1px',
                         height: `${(connectionProgress[index] || 0) * 0.8}px`,
                         maxHeight: '80px',
+                        background: 'linear-gradient(to bottom, rgb(14, 165, 233), rgb(59, 130, 246), rgb(96, 165, 250))',
                         transition: 'height 0.15s ease-out',
-                        boxShadow: connectionProgress[index] > 50 ? '0 0 6px rgba(14, 165, 233, 0.4)' : 'none'
+                        boxShadow: connectionProgress[index] > 50 ? '0 0 4px rgba(14, 165, 233, 0.3)' : 'none'
                       }}
                     >
-                      {/* Effet de brillance qui descend */}
-                      {connectionProgress[index] > 0 && (
-                        <div 
-                          className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rounded-full animate-pulse"
-                          style={{
-                            opacity: Math.min(1, connectionProgress[index] / 50),
-                            boxShadow: '0 0 6px rgba(255, 255, 255, 0.8)'
-                          }}
-                        ></div>
-                      )}
-                      
-                      {/* Point lumineux au bout */}
-                      {connectionProgress[index] > 80 && (
-                        <div 
-                          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full"
-                          style={{
-                            boxShadow: '0 0 4px rgba(59, 130, 246, 0.8)'
-                          }}
-                        ></div>
-                      )}
-                    </div>
                   </div>
                 )}
                 
