@@ -34,40 +34,40 @@ export default function Hero() {
               Suivez vos vêtements en temps réel avec notre système QR code.
             </p>
             
-            {/* 3 blocs explicatifs - Scroll horizontal mobile */}
-            <div className="flex md:grid md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fadeInUp overflow-x-auto snap-x snap-mandatory px-4 pb-2 scrollbar-hide" style={{ animationDelay: '0.3s', opacity: 0 }}>
-              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[280px] snap-center flex-shrink-0 md:min-w-0">
-                <div className="bg-white/90 p-4 rounded-full mb-4 animate-float">
-                  <Truck className="text-primary-600" size={36} />
+            {/* 3 blocs explicatifs - Côte à côte mobile */}
+            <div className="flex gap-3 md:gap-6 max-w-4xl mx-auto animate-fadeInUp overflow-x-auto px-4 pb-2 scrollbar-hide" style={{ animationDelay: '0.3s', opacity: 0 }}>
+              <div className="flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1 min-w-[110px] flex-shrink-0">
+                <div className="bg-white/90 p-3 rounded-full mb-3 animate-float">
+                  <Truck className="text-primary-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+                <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
                   Collecte à domicile
                 </h3>
-                <p className="text-sm text-white/90" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-xs md:text-sm text-white/90" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
                   Nous venons récupérer votre linge directement chez vous
                 </p>
               </div>
               
-              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[280px] snap-center flex-shrink-0 md:min-w-0" style={{ animationDelay: '0.1s' }}>
-                <div className="bg-white/90 p-4 rounded-full mb-4 animate-float" style={{ animationDelay: '0.3s' }}>
-                  <Sparkles className="text-primary-600" size={36} />
+              <div className="flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1 min-w-[110px] flex-shrink-0" style={{ animationDelay: '0.1s' }}>
+                <div className="bg-white/90 p-3 rounded-full mb-3 animate-float" style={{ animationDelay: '0.3s' }}>
+                  <Sparkles className="text-primary-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+                <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
                   Nettoyage professionnel
                 </h3>
-                <p className="text-sm text-white/90" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-xs md:text-sm text-white/90" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
                   Traitement éco-responsable par des experts du textile
                 </p>
               </div>
               
-              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[280px] snap-center flex-shrink-0 md:min-w-0" style={{ animationDelay: '0.2s' }}>
-                <div className="bg-white/90 p-4 rounded-full mb-4 animate-float" style={{ animationDelay: '0.6s' }}>
-                  <Home className="text-primary-600" size={36} />
+              <div className="flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1 min-w-[110px] flex-shrink-0" style={{ animationDelay: '0.2s' }}>
+                <div className="bg-white/90 p-3 rounded-full mb-3 animate-float" style={{ animationDelay: '0.6s' }}>
+                  <Home className="text-primary-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+                <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
                   Livraison express
                 </h3>
-                <p className="text-sm text-white/90" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-xs md:text-sm text-white/90" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>
                   Retour de votre linge impeccable sous 48h
                 </p>
               </div>
