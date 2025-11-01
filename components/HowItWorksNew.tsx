@@ -154,8 +154,8 @@ export default function HowItWorksNew() {
           <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
             Simple et efficace
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-            Comment ça marche ?
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6">
+            Comment ça marche<span className="text-2xl md:text-4xl align-sub"> ?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             6 étapes simples pour un linge impeccable, sans effort
