@@ -214,15 +214,21 @@ export default function HowItWorksNew() {
                     className={isCompleted ? 'animate-flash-border' : ''}
                   />
                   
-                  {/* Étoile dorée au point de départ (coin supérieur gauche) */}
+                  {/* Étoile brillante style "sparkle clean" au point de départ */}
                   {isCompleted && (
                     <g className="animate-star-sparkle" style={{ transformOrigin: '24px 24px' }}>
-                      <path
-                        d="M 24 18 L 26 22 L 30 23 L 27 26 L 28 30 L 24 28 L 20 30 L 21 26 L 18 23 L 22 22 Z"
-                        fill="rgb(250, 204, 21)"
-                        stroke="rgb(234, 179, 8)"
-                        strokeWidth="1"
-                      />
+                      {/* Rayon vertical */}
+                      <line x1="24" y1="14" x2="24" y2="34" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      {/* Rayon horizontal */}
+                      <line x1="14" y1="24" x2="34" y2="24" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      {/* Rayon diagonal 1 */}
+                      <line x1="17" y1="17" x2="31" y2="31" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                      {/* Rayon diagonal 2 */}
+                      <line x1="31" y1="17" x2="17" y2="31" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                      
+                      {/* Centre lumineux */}
+                      <circle cx="24" cy="24" r="3" fill="white" />
+                      <circle cx="24" cy="24" r="2" fill="rgb(14, 165, 233)" opacity="0.8" />
                     </g>
                   )}
                   
