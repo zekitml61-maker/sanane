@@ -102,7 +102,6 @@ export default function PricingToggle() {
         'Détachage expert inclus',
         'Repassage premium',
         'Traitement tissus délicats',
-        'Service client dédié 24/7',
       ],
       popular: false,
       type: 'subscription'
