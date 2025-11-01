@@ -54,7 +54,6 @@ export default function Subscriptions() {
       'Panier de 15 litres',
       'Collecte chaque lundi',
       'Livraison sous 48h',
-      'Suivi QR Code en temps réel',
       'Nettoyage pressing standard',
       'Service client prioritaire',
     ],
@@ -70,7 +69,6 @@ export default function Subscriptions() {
       'Panier de 30 litres',
       'Collecte chaque lundi',
       'Livraison sous 48h',
-      'Suivi QR Code en temps réel',
       'Nettoyage pressing premium',
       'Détachage expert inclus',
       'Service client prioritaire',
@@ -88,7 +86,6 @@ export default function Subscriptions() {
       'Panier de 50 litres',
       'Collecte chaque lundi',
       'Livraison express 24h',
-      'Suivi QR Code en temps réel',
       'Nettoyage pressing VIP',
       'Détachage expert inclus',
       'Repassage premium',
@@ -107,7 +104,7 @@ export default function Subscriptions() {
         <div className="text-center mb-16">
           <div className="mb-4">
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">
-              💎 Offres Exclusives
+              Offres Exclusives
             </span>
           </div>
           
@@ -246,7 +243,7 @@ export default function Subscriptions() {
 
             {/* Contenu */}
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">✨ Ce qui est inclus :</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Ce qui est inclus :</h3>
               <ul className="space-y-2 mb-6">
                 {selectedFormule.features.map((feature: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-2">
@@ -257,11 +254,11 @@ export default function Subscriptions() {
               </ul>
 
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-4 mb-6">
-                <p className="text-xs text-green-800 font-semibold mb-2">🎉 Avantages :</p>
+                <p className="text-xs text-green-800 font-semibold mb-2">Avantages :</p>
                 <ul className="text-xs text-green-700 space-y-1">
-                  <li>✓ Collecte gratuite chaque {collectionDays.join(', ')}</li>
-                  <li>✓ Sans engagement</li>
-                  <li>✓ Suivi en temps réel</li>
+                  <li>Collecte gratuite chaque {collectionDays.join(', ')}</li>
+                  <li>Sans engagement</li>
+                  <li>Suivi en temps réel</li>
                 </ul>
               </div>
 

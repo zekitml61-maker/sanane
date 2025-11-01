@@ -92,7 +92,7 @@ export default function ALaCarte() {
         <div className="text-center mb-16">
           <div className="mb-4">
             <span className="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold">
-              💳 Service à la carte
+              Service à la carte
             </span>
           </div>
           
@@ -194,7 +194,7 @@ export default function ALaCarte() {
 
             {/* Contenu */}
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">✨ Ce qui est inclus :</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Ce qui est inclus :</h3>
               <ul className="space-y-2 mb-6">
                 {selectedOffer.features.map((feature: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-2">
@@ -205,11 +205,11 @@ export default function ALaCarte() {
               </ul>
 
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl p-4 mb-6">
-                <p className="text-xs text-amber-800 font-semibold mb-2">💳 Service à la carte :</p>
+                <p className="text-xs text-amber-800 font-semibold mb-2">Service à la carte :</p>
                 <ul className="text-xs text-amber-700 space-y-1">
-                  <li>✓ Paiement à la livraison uniquement</li>
-                  <li>✓ Sans engagement ni abonnement</li>
-                  <li>✓ Commandez quand vous voulez</li>
+                  <li>Paiement à la livraison uniquement</li>
+                  <li>Sans engagement ni abonnement</li>
+                  <li>Commandez quand vous voulez</li>
                 </ul>
               </div>
 

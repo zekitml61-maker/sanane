@@ -11,7 +11,7 @@ export default function Navbar() {
   const { settings } = useSettings();
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50 top-[36px]">
+    <nav className="bg-white shadow-md fixed w-full z-[100] top-[36px]">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <div className="flex items-center">
@@ -25,19 +25,21 @@ export default function Navbar() {
             </a>
           </div>
 
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="flex items-center gap-2">
+            {/* Téléphone mobile header */}
+            <a
+              href={`tel:${settings?.company?.phone?.replace(/\s/g, '') || '+33756958694'}`}
+              className="md:hidden flex items-center justify-center bg-primary-600 text-white w-10 h-10 rounded-full"
+            >
+              <Phone size={20} />
+            </a>
+
+            <div className="hidden md:flex items-center space-x-2">
             <a 
               href="#tarifs" 
               className="relative px-5 py-2 text-gray-800 font-medium hover:text-primary-600 transition-all duration-300 group"
             >
               <span className="relative z-10">Nos Tarifs</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a 
-              href="#suivi" 
-              className="relative px-5 py-2 text-gray-800 font-medium hover:text-primary-600 transition-all duration-300 group"
-            >
-              <span className="relative z-10">Suivi Commande</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
             </a>
             <a 
@@ -72,12 +74,11 @@ export default function Navbar() {
               <span className="relative z-10 hidden sm:inline">{settings?.company?.phone || '07 56 95 86 94'}</span>
               <span className="relative z-10 sm:hidden">Appeler</span>
             </a>
-          </div>
+            </div>
 
-          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary-600"
+              className="md:hidden text-gray-700 hover:text-primary-600"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -94,13 +95,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Nos Tarifs
-            </a>
-            <a
-              href="#suivi"
-              className="block py-3 px-4 text-gray-800 font-medium hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-all duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Suivi Commande
             </a>
             <a
               href="#contact"
@@ -123,13 +117,6 @@ export default function Navbar() {
               {/* Effet glow animé autour de la couronne */}
               <span className="absolute left-6 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/30 rounded-full blur-md animate-ping"></span>
             </button>
-            <a
-              href={`tel:${settings?.company?.phone?.replace(/\s/g, '') || '+33756958694'}`}
-              className="flex items-center gap-2 justify-center bg-primary-600 text-white px-6 py-3 rounded-full hover:bg-primary-700 font-medium mt-2"
-            >
-              <Phone size={18} />
-              <span>{settings?.company?.phone || '07 56 95 86 94'}</span>
-            </a>
           </div>
         </div>
       )}

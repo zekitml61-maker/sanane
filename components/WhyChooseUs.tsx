@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
                   </div>
                   <p className="text-xs text-gray-600">par mois</p>
                   <p className="text-xs text-green-600 mt-3 font-semibold">
-                    Service tout-en-un inclus !
+                    Service tout-en-un inclus ! Puis 29,90€
                   </p>
                 </div>
               </div>

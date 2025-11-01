@@ -14,7 +14,7 @@ const testimonials = [
     role: 'Client Premium',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
     rating: 5,
-    text: 'Exellent rapport qualité-prix. L\'équipe est professionelle et le suivi par QR code est génial. Plus jamais sans C\'Propre !',
+    text: 'Exellent rapport qualité-prix. L\'équipe est professionnelle et très réactive. Je recommande vivement !',
   },
   {
     name: 'Marie Leroy',
