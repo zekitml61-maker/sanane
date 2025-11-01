@@ -30,8 +30,7 @@ export default function Hero() {
               </h1>
             </div>
             <p className="text-lg sm:text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto font-semibold animate-fadeInUp px-4" style={{ animationDelay: '0.2s', opacity: 0 }}>
-              Collecte chaque lundi, nettoyage impeccable, livraison rapide. 
-              Suivez vos vêtements en temps réel avec notre système QR code.
+              Collecte chaque lundi, nettoyage impeccable, livraison rapide.
             </p>
             
             {/* 3 blocs explicatifs - Côte à côte mobile */}
