@@ -58,7 +58,7 @@ export default function LaunchOfferBanner() {
       </div>
       
       {/* Overlay fondu gris sous le banner */}
-      <div className="fixed top-[36px] left-0 right-0 h-8 bg-gradient-to-b from-gray-900/30 to-transparent z-[59] pointer-events-none"></div>
+      <div className="fixed top-[36px] left-0 right-0 h-20 bg-gradient-to-b from-black/50 via-black/20 to-transparent z-[59] pointer-events-none"></div>
     </>
   );
 }
