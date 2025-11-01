@@ -114,7 +114,7 @@ export default function Navbar() {
                 setIsOpen(false);
                 setLoginModalOpen(true);
               }}
-              className="relative flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-primary-600 to-blue-600 text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 mt-2 overflow-hidden group w-full"
+              className="relative flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-primary-600 to-blue-600 text-white font-bold rounded-full hover:shadow-lg transition-all duration-300 mt-2 overflow-hidden group w-full"
             >
               <Crown size={18} className="animate-pulse text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" fill="white" />
               <span className="relative z-10">Espace Client</span>
