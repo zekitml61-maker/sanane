@@ -364,18 +364,45 @@ export default function PricingToggle() {
                 </div>
               )}
 
-              <div className={`bg-gradient-to-r ${offer.color} p-6 text-white`}>
+              <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative`}>
+                {/* Badge offre lancement */}
+                {activeTab === 'subscription' && (
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-xl animate-pulse z-10">
+                    🔥 -10% Offre lancement
+                  </div>
+                )}
+                
                 <offer.icon size={40} className="mb-3 md:w-12 md:h-12" />
                 <h3 className="text-lg md:text-2xl font-bold mb-2">{offer.name}</h3>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-3xl md:text-5xl font-bold">{offer.price}€</span>
-                  <span className="text-sm md:text-xl opacity-90">
-                    {activeTab === 'subscription' ? '/mois' : '/cmd'}
-                  </span>
-                </div>
+                
+                {/* Prix avec barré pour abonnements */}
+                {activeTab === 'subscription' ? (
+                  <div>
+                    <div className="flex items-center gap-3 mb-1">
+                      <span className="text-2xl md:text-3xl line-through opacity-60">{offer.price}€*</span>
+                      <span className="text-3xl md:text-5xl font-bold">
+                        {(parseFloat(offer.price) * 0.9).toFixed(2)}€
+                      </span>
+                    </div>
+                    <span className="text-sm md:text-xl opacity-90">/mois</span>
+                  </div>
+                ) : (
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-3xl md:text-5xl font-bold">{offer.price}€</span>
+                    <span className="text-sm md:text-xl opacity-90">/cmd</span>
+                  </div>
+                )}
+                
                 <p className="mt-2 text-base md:text-xl font-semibold opacity-90">
                   Panier {offer.capacity}
                 </p>
+                
+                {/* Note astérisque */}
+                {activeTab === 'subscription' && (
+                  <p className="mt-3 text-xs italic opacity-80">
+                    * Le premier mois
+                  </p>
+                )}
               </div>
 
               <div className="p-5 md:p-8 flex flex-col flex-grow">

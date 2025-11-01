@@ -1,8 +1,8 @@
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
+import HowItWorksNew from '@/components/HowItWorksNew';
+import WhyChooseUs from '@/components/WhyChooseUs';
 import Features from '@/components/Features';
 import PricingToggle from '@/components/PricingToggle';
-import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
 import QRCodeTracking from '@/components/QRCodeTracking';
@@ -14,10 +14,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Services />
+      <HowItWorksNew />
+      <WhyChooseUs />
       <Features />
       <PricingToggle />
-      <HowItWorks />
       <Testimonials />
       <CTA />
       <QRCodeTracking />

@@ -92,6 +92,29 @@ body {
     }
   }
   
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .animate-drawLine {
+    animation: drawLine 6s ease-out forwards;
+  }
+  
   @keyframes float-premium {
     0%, 100% {
       transform: translateY(0px) scale(1);
