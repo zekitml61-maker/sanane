@@ -38,9 +38,9 @@ export default function WhyChooseUs() {
               </div>
 
               {/* Comparaison verticale */}
-              <div className="flex flex-col items-center gap-6">
+              <div className="flex flex-col items-center gap-6 max-w-md mx-auto">
                 {/* Avant */}
-                <div className="text-center p-6 bg-red-50 rounded-2xl border-2 border-red-200 w-full max-w-md">
+                <div className="text-center p-6 bg-red-50 rounded-2xl border-2 border-red-200 w-full">
                   <p className="text-sm font-semibold text-red-700 mb-2 uppercase tracking-wide">
                     Pressing traditionnel
                   </p>
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Après */}
-                <div className="text-center p-6 bg-gradient-to-br from-green-50 to-primary-50 rounded-2xl border-2 border-green-300 relative w-full max-w-md">
+                <div className="text-center p-6 bg-gradient-to-br from-green-50 to-primary-50 rounded-2xl border-2 border-green-300 relative w-full">
                   {/* Badge "Meilleur prix" */}
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse">
                     Meilleur prix
@@ -84,9 +84,9 @@ export default function WhyChooseUs() {
                 </div>
               </div>
 
-              {/* Économie */}
-              <div className="mt-8 flex justify-center">
-                <div className="inline-flex flex-wrap items-baseline justify-center gap-2 bg-gradient-to-r from-green-500/10 to-primary-600/10 border-2 border-green-500 text-gray-900 px-6 py-3 rounded-2xl">
+              {/* Économie - Aligné avec les cartes */}
+              <div className="mt-8 w-full">
+                <div className="flex flex-wrap items-baseline justify-center gap-2 bg-gradient-to-r from-green-500/10 to-primary-600/10 border-2 border-green-500 text-gray-900 px-6 py-3 rounded-2xl">
                   <p className="text-sm font-semibold text-green-700 whitespace-nowrap">Économies mensuelles :</p>
                   <p className="text-3xl font-black text-green-600 whitespace-nowrap">Jusqu'à 33€</p>
                 </div>
