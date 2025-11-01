@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import { Package, Shirt, Truck, Sparkles, Bell, Trophy, LucideIcon } from 'lucide-react';
 
 interface Step {
@@ -70,6 +71,29 @@ const steps: Step[] = [
 ];
 
 export default function HowItWorksNew() {
+  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = parseInt(entry.target.getAttribute('data-index') || '0');
+          if (entry.isIntersecting) {
+            setVisibleCards(prev => [...new Set([...prev, index])]);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="comment-ca-marche" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,10 +143,15 @@ export default function HowItWorksNew() {
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step: Step, index: number) => {
               const Icon = step.icon;
+              const isVisible = visibleCards.includes(index);
               return (
               <div
                 key={index}
-                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-500 animate-fadeInUp"
+                ref={(el) => { cardRefs.current[index] = el; }}
+                data-index={index}
+                className={`group relative bg-white rounded-3xl p-8 border-2 hover:shadow-2xl animate-fadeInUp ${
+                  isVisible ? 'border-fill-animation' : 'border-gray-200'
+                }`}
                 style={{ animationDelay: `${index * 0.15}s`, opacity: 0 }}
               >
                 {/* Badge */}
