@@ -357,7 +357,7 @@ export default function PricingToggle() {
               style={{ animationDelay: `${index * 0.1}s`, opacity: 0, overflow: 'visible' }}
             >
               {offer.popular && (
-                <div className="absolute top-0 right-0 bg-primary-500 text-white px-3 py-1.5 md:px-6 md:py-2 rounded-bl-2xl font-semibold text-xs md:text-sm">
+                <div className="absolute top-0 right-0 bg-primary-500 text-white px-3 py-1.5 md:px-6 md:py-2 rounded-tr-[2rem] rounded-bl-2xl font-semibold text-xs md:text-sm">
                   ⭐ Populaire
                 </div>
               )}
