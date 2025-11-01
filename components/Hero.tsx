@@ -34,9 +34,9 @@ export default function Hero() {
               Suivez vos vêtements en temps réel avec notre système QR code.
             </p>
             
-            {/* 3 blocs explicatifs */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fadeInUp px-4" style={{ animationDelay: '0.3s', opacity: 0 }}>
-              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            {/* 3 blocs explicatifs - Scroll horizontal mobile */}
+            <div className="flex md:grid md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fadeInUp overflow-x-auto snap-x snap-mandatory px-4 pb-2 scrollbar-hide" style={{ animationDelay: '0.3s', opacity: 0 }}>
+              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[280px] snap-center flex-shrink-0 md:min-w-0">
                 <div className="bg-white/90 p-4 rounded-full mb-4 animate-float">
                   <Truck className="text-primary-600" size={36} />
                 </div>
@@ -48,7 +48,7 @@ export default function Hero() {
                 </p>
               </div>
               
-              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300" style={{ animationDelay: '0.1s' }}>
+              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[280px] snap-center flex-shrink-0 md:min-w-0" style={{ animationDelay: '0.1s' }}>
                 <div className="bg-white/90 p-4 rounded-full mb-4 animate-float" style={{ animationDelay: '0.3s' }}>
                   <Sparkles className="text-primary-600" size={36} />
                 </div>
@@ -60,7 +60,7 @@ export default function Hero() {
                 </p>
               </div>
               
-              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+              <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[280px] snap-center flex-shrink-0 md:min-w-0" style={{ animationDelay: '0.2s' }}>
                 <div className="bg-white/90 p-4 rounded-full mb-4 animate-float" style={{ animationDelay: '0.6s' }}>
                   <Home className="text-primary-600" size={36} />
                 </div>
