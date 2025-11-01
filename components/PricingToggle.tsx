@@ -367,7 +367,7 @@ export default function PricingToggle() {
               <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative overflow-visible`}>
                 {/* Badge offre lancement */}
                 {activeTab === 'subscription' && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-primary-600 to-blue-600 text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold shadow-xl animate-pulse z-20">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-xs sm:text-sm font-black shadow-2xl animate-bounce z-20 border-2 border-white">
                     -10% Offre lancement
                   </div>
                 )}
