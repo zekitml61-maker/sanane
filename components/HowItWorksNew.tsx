@@ -150,10 +150,16 @@ export default function HowItWorksNew() {
                 key={index}
                 ref={(el) => { cardRefs.current[index] = el; }}
                 data-index={index}
-                className={`group relative bg-white rounded-3xl p-8 border-2 hover:shadow-2xl animate-fadeInUp ${
-                  isVisible ? 'border-fill-animation' : 'border-gray-200'
-                }`}
-                style={{ animationDelay: `${index * 0.15}s`, opacity: 0 }}
+                className="group relative bg-white rounded-3xl p-8 hover:shadow-2xl animate-fadeInUp"
+                style={{ 
+                  animationDelay: `${index * 0.15}s`, 
+                  opacity: 0,
+                  borderWidth: isVisible ? '3px' : '2px',
+                  borderStyle: 'solid',
+                  borderColor: isVisible ? 'rgb(14, 165, 233)' : 'rgb(229, 231, 235)',
+                  boxShadow: isVisible ? '0 0 20px rgba(14, 165, 233, 0.4)' : 'none',
+                  transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
               >
                 {/* Badge */}
                 <div className={`inline-block px-3 py-1 ${step.badgeColor} rounded-full text-xs font-bold mb-4`}>
