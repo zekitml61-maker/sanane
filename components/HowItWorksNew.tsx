@@ -84,26 +84,21 @@ export default function HowItWorksNew() {
         
         const cardTop = rect.top;
         const cardBottom = rect.bottom;
-        const cardHeight = rect.height;
         
-        // La barre commence à se remplir quand la carte est visible
-        // et se termine quand la carte est presque sortie en haut
         let progress = 0;
         
-        // Start: Quand le bas de la carte entre dans la vue (bas de l'écran)
-        // End: Quand le haut de la carte atteint le milieu de l'écran
-        const startPoint = windowHeight; // Bas de l'écran
-        const endPoint = windowHeight * 0.3; // 30% du haut de l'écran
-        
+        // La carte est visible dans la fenêtre
         if (cardBottom > 0 && cardTop < windowHeight) {
-          if (cardTop <= endPoint) {
-            progress = 100;
-          } else if (cardBottom >= startPoint) {
-            // Calcul progressif entre startPoint et endPoint
-            const scrollRange = startPoint - endPoint;
-            const currentPosition = cardTop - endPoint;
-            progress = Math.max(0, Math.min(100, ((scrollRange - currentPosition) / scrollRange) * 100));
-          }
+          // Distance totale que la carte parcourt dans la fenêtre
+          const totalDistance = windowHeight;
+          
+          // Distance parcourue (de bas d'écran jusqu'à position actuelle)
+          // Quand cardBottom = windowHeight (entre juste) → distance = 0
+          // Quand cardTop = 0 (sort en haut) → distance = windowHeight
+          const traveledDistance = windowHeight - cardTop;
+          
+          // Calcul du pourcentage (0% à 100%)
+          progress = Math.max(0, Math.min(100, (traveledDistance / totalDistance) * 100));
         }
         
         setScrollProgress(prev => ({ ...prev, [index]: progress }));
