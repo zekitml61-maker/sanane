@@ -217,18 +217,21 @@ export default function HowItWorksNew() {
                   {/* Étoile brillante style "sparkle clean" au point de départ */}
                   {isCompleted && (
                     <g className="animate-star-sparkle" style={{ transformOrigin: '24px 24px' }}>
-                      {/* Rayon vertical */}
-                      <line x1="24" y1="14" x2="24" y2="34" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                      {/* Rayon horizontal */}
-                      <line x1="14" y1="24" x2="34" y2="24" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                      {/* Rayon diagonal 1 */}
-                      <line x1="17" y1="17" x2="31" y2="31" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-                      {/* Rayon diagonal 2 */}
-                      <line x1="31" y1="17" x2="17" y2="31" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                      {/* Halo blanc pour visibilité */}
+                      <circle cx="24" cy="24" r="8" fill="white" opacity="0.9" />
                       
-                      {/* Centre lumineux */}
-                      <circle cx="24" cy="24" r="3" fill="white" />
-                      <circle cx="24" cy="24" r="2" fill="rgb(14, 165, 233)" opacity="0.8" />
+                      {/* Rayon vertical bleu */}
+                      <line x1="24" y1="14" x2="24" y2="34" stroke="rgb(14, 165, 233)" strokeWidth="3" strokeLinecap="round" />
+                      {/* Rayon horizontal bleu */}
+                      <line x1="14" y1="24" x2="34" y2="24" stroke="rgb(14, 165, 233)" strokeWidth="3" strokeLinecap="round" />
+                      {/* Rayon diagonal 1 */}
+                      <line x1="17" y1="17" x2="31" y2="31" stroke="rgb(59, 130, 246)" strokeWidth="2" strokeLinecap="round" />
+                      {/* Rayon diagonal 2 */}
+                      <line x1="31" y1="17" x2="17" y2="31" stroke="rgb(59, 130, 246)" strokeWidth="2" strokeLinecap="round" />
+                      
+                      {/* Centre lumineux jaune/blanc */}
+                      <circle cx="24" cy="24" r="4" fill="rgb(250, 204, 21)" />
+                      <circle cx="24" cy="24" r="2" fill="white" />
                     </g>
                   )}
                   
