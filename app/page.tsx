@@ -2,7 +2,6 @@ import Hero from '@/components/Hero';
 import LaunchOfferBanner from '@/components/LaunchOfferBanner';
 import HowItWorksNew from '@/components/HowItWorksNew';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import Features from '@/components/Features';
 import PricingToggle from '@/components/PricingToggle';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
@@ -18,7 +17,6 @@ export default function Home() {
       <Hero />
       <HowItWorksNew />
       <WhyChooseUs />
-      <Features />
       <PricingToggle />
       <Testimonials />
       <CTA />
