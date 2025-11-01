@@ -45,79 +45,63 @@ export default function LaunchOfferBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-20 left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl px-4 animate-slideDown">
-      <div className="bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl shadow-2xl border-2 border-white/20 overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 z-40 animate-k200">
+      <div className="bg-gradient-to-r from-primary-600 to-blue-600 shadow-lg relative">
+        {/* Barre de progression animée en bas */}
+        <div className="absolute bottom-0 left-0 h-1 bg-white/30 w-full">
+          <div className="h-full bg-white animate-progressBar"></div>
+        </div>
+
         {/* Bouton fermer */}
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 text-white/80 hover:text-white p-1.5 rounded-full hover:bg-white/20 transition z-10"
+          className="absolute top-2 right-2 text-white/70 hover:text-white p-1 rounded-full hover:bg-white/20 transition"
           title="Fermer"
         >
-          <X size={20} />
+          <X size={16} />
         </button>
 
-        <div className="p-4 sm:p-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            {/* Texte principal */}
-            <div className="flex-1 text-center sm:text-left">
-              <h3 className="text-lg sm:text-xl font-black text-white uppercase tracking-wide mb-1">
-                Offre de Lancement Exclusive
-              </h3>
-              <p className="text-sm text-white/90">
-                Votre 1er mois à <span className="text-xl font-black">-10%</span>
-              </p>
+        <div className="container mx-auto px-4 py-2.5">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-white">
+            {/* Texte accrocheur */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm sm:text-base font-bold">OFFRE LANCEMENT</span>
+              <span className="text-xs sm:text-sm">•</span>
+              <span className="text-sm sm:text-base font-black">-10%</span>
             </div>
 
-            {/* Code promo */}
+            {/* Code promo compact */}
             <div className="flex items-center gap-2">
-              <div className="bg-white/20 backdrop-blur-sm border-2 border-white/50 rounded-lg px-3 py-1.5">
-                <span className="text-lg font-mono font-black text-white tracking-wider">
-                  CPROPRE10
-                </span>
+              <span className="text-xs sm:text-sm">Code:</span>
+              <div className="bg-white/20 border border-white/40 rounded px-2 py-0.5">
+                <span className="text-sm font-mono font-bold tracking-wide">CPROPRE10</span>
               </div>
               <button
                 onClick={handleCopy}
-                className="bg-white text-primary-600 p-2 rounded-lg hover:bg-gray-100 transition-all hover:scale-110 active:scale-95"
-                title="Copier le code"
+                className="bg-white/20 hover:bg-white/30 p-1.5 rounded transition-all active:scale-95"
               >
-                {copied ? (
-                  <Check size={18} className="animate-bounce" />
-                ) : (
-                  <Copy size={18} />
-                )}
+                {copied ? <Check size={14} /> : <Copy size={14} />}
               </button>
             </div>
 
-            {/* Compteur compact */}
-            <div className="flex items-center gap-2">
-              <Clock size={16} className="text-white animate-pulse" />
-              <div className="flex items-center gap-1">
-                <div className="bg-white/20 backdrop-blur-sm border border-white/50 rounded px-2 py-1 min-w-[35px] text-center">
-                  <span className="text-lg font-black font-mono text-white">
-                    {String(timeLeft.hours).padStart(2, '0')}
-                  </span>
-                </div>
-                <span className="text-white font-black">:</span>
-                <div className="bg-white/20 backdrop-blur-sm border border-white/50 rounded px-2 py-1 min-w-[35px] text-center">
-                  <span className="text-lg font-black font-mono text-white">
-                    {String(timeLeft.minutes).padStart(2, '0')}
-                  </span>
-                </div>
-                <span className="text-white font-black">:</span>
-                <div className="bg-white/20 backdrop-blur-sm border border-white/50 rounded px-2 py-1 min-w-[35px] text-center">
-                  <span className="text-lg font-black font-mono text-white">
-                    {String(timeLeft.seconds).padStart(2, '0')}
-                  </span>
-                </div>
+            {/* Compteur ultra-compact */}
+            <div className="flex items-center gap-1.5">
+              <Clock size={14} className="animate-pulse" />
+              <div className="flex items-center gap-0.5 text-sm font-mono font-bold">
+                <span>{String(timeLeft.hours).padStart(2, '0')}</span>
+                <span>:</span>
+                <span>{String(timeLeft.minutes).padStart(2, '0')}</span>
+                <span>:</span>
+                <span>{String(timeLeft.seconds).padStart(2, '0')}</span>
               </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA mini */}
             <a
               href="#tarifs"
-              className="bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-black hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg whitespace-nowrap"
+              className="bg-white text-primary-600 px-3 py-1 rounded-full text-xs font-bold hover:bg-gray-100 transition-all hover:scale-105"
             >
-              Voir les offres
+              Profiter
             </a>
           </div>
         </div>

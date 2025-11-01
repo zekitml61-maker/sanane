@@ -130,6 +130,34 @@ body {
     animation: slideDown 0.5s ease-out;
   }
   
+  @keyframes k200 {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-k200 {
+    animation: k200 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  @keyframes progressBar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .animate-progressBar {
+    animation: progressBar 10s linear infinite;
+  }
+  
   @keyframes float-premium {
     0%, 100% {
       transform: translateY(0px) scale(1);
