@@ -86,9 +86,9 @@ export default function WhyChooseUs() {
 
               {/* Économie */}
               <div className="mt-8 text-center">
-                <div className="inline-block bg-gradient-to-r from-green-500 to-primary-600 text-white px-8 py-4 rounded-full shadow-xl">
-                  <p className="text-sm font-semibold mb-1">Économies mensuelles</p>
-                  <p className="text-4xl font-black">Jusqu'à 33€ !</p>
+                <div className="inline-flex items-baseline gap-2 bg-gradient-to-r from-green-500/10 to-primary-600/10 border-2 border-green-500 text-gray-900 px-6 py-3 rounded-2xl">
+                  <p className="text-sm font-semibold text-green-700">Économies mensuelles :</p>
+                  <p className="text-3xl font-black text-green-600">Jusqu'à 33€</p>
                 </div>
               </div>
             </div>
