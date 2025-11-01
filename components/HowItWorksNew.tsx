@@ -182,10 +182,11 @@ export default function HowItWorksNew() {
                 key={index}
                 ref={(el) => { cardRefs.current[index] = el; }}
                 data-index={index}
-                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:shadow-2xl animate-fadeInUp overflow-visible"
+                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:shadow-2xl overflow-visible"
                 style={{ 
-                  animationDelay: `${index * 0.15}s`, 
-                  opacity: 0
+                  transform: progress > 10 ? 'scale(1)' : 'scale(0.9)',
+                  opacity: progress > 10 ? 1 : 0.3,
+                  transition: 'transform 0.5s ease-out, opacity 0.5s ease-out'
                 }}
               >
                 {/* SVG bordure qui se remplit - Mobile uniquement */}
