@@ -72,6 +72,7 @@ const steps: Step[] = [
 
 export default function HowItWorksNew() {
   const [scrollProgress, setScrollProgress] = useState<{ [key: number]: number }>({});
+  const [completedCards, setCompletedCards] = useState<Set<number>>(new Set());
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -99,6 +100,19 @@ export default function HowItWorksNew() {
           
           // Calcul du pourcentage (0% à 100%)
           progress = Math.max(0, Math.min(100, (traveledDistance / totalDistance) * 100));
+          
+          // Détecter quand atteint 100% pour la première fois
+          if (progress >= 99.5 && !completedCards.has(index)) {
+            setCompletedCards(prev => new Set([...prev, index]));
+            // Retirer après l'animation
+            setTimeout(() => {
+              setCompletedCards(prev => {
+                const newSet = new Set(prev);
+                newSet.delete(index);
+                return newSet;
+              });
+            }, 600);
+          }
         }
         
         setScrollProgress(prev => ({ ...prev, [index]: progress }));
@@ -161,6 +175,7 @@ export default function HowItWorksNew() {
             {steps.map((step: Step, index: number) => {
               const Icon = step.icon;
               const progress = scrollProgress[index] || 0;
+              const isCompleted = completedCards.has(index);
               
               return (
               <div
@@ -193,7 +208,11 @@ export default function HowItWorksNew() {
                     strokeWidth="3"
                     strokeDasharray="2000"
                     strokeDashoffset={2000 - (progress / 100) * 2000}
-                    style={{ transition: 'stroke-dashoffset 0.1s ease-out' }}
+                    style={{ 
+                      transition: 'stroke-dashoffset 0.1s ease-out',
+                      filter: isCompleted ? 'drop-shadow(0 0 8px rgba(14, 165, 233, 0.8))' : 'none'
+                    }}
+                    className={isCompleted ? 'animate-flash-border' : ''}
                   />
                   <defs>
                     <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
