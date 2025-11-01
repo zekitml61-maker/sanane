@@ -122,11 +122,9 @@ export default function HowItWorksNew() {
               return (
               <div
                 key={index}
-                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-500 animate-fadeInUp overflow-hidden"
+                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-500 animate-fadeInUp"
                 style={{ animationDelay: `${index * 0.15}s`, opacity: 0 }}
               >
-                {/* Overlay fondu en haut de chaque carte */}
-                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-gray-900/20 via-gray-900/10 to-transparent pointer-events-none"></div>
                 {/* Badge */}
                 <div className={`inline-block px-3 py-1 ${step.badgeColor} rounded-full text-xs font-bold mb-4`}>
                   {step.badge}

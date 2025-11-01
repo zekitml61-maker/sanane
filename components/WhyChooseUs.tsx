@@ -98,8 +98,7 @@ export default function WhyChooseUs() {
         {/* 4 arguments en grille */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Argument 1 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-900/15 via-gray-900/8 to-transparent pointer-events-none"></div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Clock className="text-white" size={28} />
             </div>
@@ -112,8 +111,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Argument 2 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-900/15 via-gray-900/8 to-transparent pointer-events-none"></div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
             <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <TrendingDown className="text-white" size={28} />
             </div>
@@ -126,8 +124,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Argument 3 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-900/15 via-gray-900/8 to-transparent pointer-events-none"></div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
             <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Package className="text-white" size={28} />
             </div>
@@ -140,8 +137,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Argument 4 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-900/15 via-gray-900/8 to-transparent pointer-events-none"></div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
             <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Shield className="text-white" size={28} />
             </div>
