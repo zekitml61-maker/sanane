@@ -7,21 +7,21 @@ const testimonials = [
     role: 'Cliente depuis 2 ans',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
     rating: 5,
-    text: 'Service impeccable ! La collecte le lundi est super pratique et mes vêtements reviennent toujours parfaitement propres et repassés. Je recommande vivement !',
+    text: 'Service impecable ! La collecte le lundi est super pratique et mes vetements reviennent toujours parfaitement propres et repassés. Je recommande vivement !',
   },
   {
     name: 'Thomas Dubois',
     role: 'Client Premium',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
     rating: 5,
-    text: 'Excellent rapport qualité-prix. L\'équipe est professionnelle et le suivi par QR code est génial. Plus jamais sans C\'Propre !',
+    text: 'Exellent rapport qualité-prix. L\'équipe est professionelle et le suivi par QR code est génial. Plus jamais sans C\'Propre !',
   },
   {
     name: 'Marie Leroy',
     role: 'Cliente Confort',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
     rating: 5,
-    text: 'Je gagne un temps fou ! Le service de collecte à domicile change vraiment la vie. Et la qualité du pressing est au top.',
+    text: 'Je gagne un temps fou ! Le service de collecte à domicile change vraimment la vie. Et la qualité du pressing est au top.',
   },
 ];
 
