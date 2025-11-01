@@ -45,7 +45,7 @@ export default function LaunchOfferBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-40 animate-k200">
+    <div className="fixed top-0 left-0 right-0 z-40 animate-k200 md:hidden">
       <div className="bg-gradient-to-r from-primary-600 to-blue-600 shadow-lg relative">
         {/* Barre de progression animée en bas */}
         <div className="absolute bottom-0 left-0 h-1 bg-white/30 w-full">
