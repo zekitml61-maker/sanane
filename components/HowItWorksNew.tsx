@@ -156,27 +156,25 @@ export default function HowItWorksNew() {
             {steps.map((step: Step, index: number) => {
               const Icon = step.icon;
               const progress = scrollProgress[index] || 0;
-              const dashOffset = 400 - (progress / 100) * 400; // Circonférence bordure
               
               return (
               <div
                 key={index}
                 ref={(el) => { cardRefs.current[index] = el; }}
                 data-index={index}
-                className="group relative bg-white rounded-3xl p-8 hover:shadow-2xl animate-fadeInUp overflow-hidden"
+                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:shadow-2xl animate-fadeInUp overflow-hidden"
                 style={{ 
                   animationDelay: `${index * 0.15}s`, 
-                  opacity: 0,
-                  border: '3px solid transparent',
-                  borderImage: `linear-gradient(90deg, 
-                    rgb(14, 165, 233) 0%, 
-                    rgb(14, 165, 233) ${progress}%, 
-                    rgb(229, 231, 235) ${progress}%, 
-                    rgb(229, 231, 235) 100%) 1`,
-                  boxShadow: progress > 50 ? `0 0 ${progress * 0.3}px rgba(14, 165, 233, ${progress / 200})` : 'none',
-                  transition: 'box-shadow 0.1s ease-out'
+                  opacity: 0
                 }}
               >
+                {/* Barre de progression horizontale en haut - Mobile uniquement */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200 md:hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-primary-500 to-blue-500 transition-all duration-100"
+                    style={{ width: `${progress}%` }}
+                  ></div>
+                </div>
                 {/* Badge */}
                 <div className={`inline-block px-3 py-1 ${step.badgeColor} rounded-full text-xs font-bold mb-4`}>
                   {step.badge}
