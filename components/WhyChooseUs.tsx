@@ -143,7 +143,7 @@ export default function WhyChooseUs() {
               Qualité garantie
             </h4>
             <p className="text-gray-600 text-xs md:text-sm">
-              Satisfaction 100% ou remboursé. Sans condition.
+              Satisfaction 100% ou remboursé.
             </p>
           </div>
         </div>
