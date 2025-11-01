@@ -104,7 +104,6 @@ export default function PricingToggle() {
         'Repassage premium',
         'Traitement tissus délicats',
         'Service client dédié 24/7',
-        'Emballage luxe',
       ],
       popular: false,
       type: 'subscription'
