@@ -73,6 +73,7 @@ const steps: Step[] = [
 export default function HowItWorksNew() {
   const [scrollProgress, setScrollProgress] = useState<{ [key: number]: number }>({});
   const [completedCards, setCompletedCards] = useState<Set<number>>(new Set());
+  const [connectionProgress, setConnectionProgress] = useState<{ [key: number]: number }>({});
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -129,6 +130,13 @@ export default function HowItWorksNew() {
         }
         
         setScrollProgress(prev => ({ ...prev, [index]: progress }));
+        
+        // Calculer le progress de connexion vers la carte suivante
+        if (index < cardRefs.current.length - 1) {
+          // La ligne de connexion commence à se dessiner quand la carte actuelle atteint 80%
+          const connectionProg = Math.max(0, Math.min(100, (progress - 80) * 5));
+          setConnectionProgress(prev => ({ ...prev, [index]: connectionProg }));
+        }
       });
     };
 
@@ -181,6 +189,56 @@ export default function HowItWorksNew() {
               strokeDashoffset="2000"
               className="animate-drawLine"
             />
+          </svg>
+
+          {/* SVG pour les lignes de connexion - Mobile uniquement */}
+          <svg 
+            className="absolute inset-0 w-full h-full pointer-events-none md:hidden" 
+            style={{ zIndex: 5 }}
+          >
+            {steps.map((_, index) => {
+              if (index >= steps.length - 1) return null;
+              
+              const currentCard = cardRefs.current[index];
+              const nextCard = cardRefs.current[index + 1];
+              
+              if (!currentCard || !nextCard) return null;
+              
+              const currentRect = currentCard.getBoundingClientRect();
+              const nextRect = nextCard.getBoundingClientRect();
+              const containerRect = currentCard.parentElement?.parentElement?.getBoundingClientRect();
+              
+              if (!containerRect) return null;
+              
+              // Positions relatives au conteneur
+              const startX = currentRect.left + currentRect.width / 2 - containerRect.left;
+              const startY = currentRect.bottom - containerRect.top;
+              const endX = nextRect.left + nextRect.width / 2 - containerRect.left;
+              const endY = nextRect.top - containerRect.top;
+              
+              const connProg = connectionProgress[index] || 0;
+              const pathLength = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+              
+              return (
+                <line
+                  key={`connection-${index}`}
+                  x1={startX}
+                  y1={startY}
+                  x2={startX + (endX - startX) * (connProg / 100)}
+                  y2={startY + (endY - startY) * (connProg / 100)}
+                  stroke="url(#connection-gradient)"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  style={{ transition: 'all 0.1s ease-out' }}
+                />
+              );
+            })}
+            <defs>
+              <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="rgb(14, 165, 233)" />
+                <stop offset="100%" stopColor="rgb(59, 130, 246)" />
+              </linearGradient>
+            </defs>
           </svg>
 
           {/* Grille 3x2 */}
