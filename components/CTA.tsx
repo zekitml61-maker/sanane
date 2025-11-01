@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, Phone, Gift, Tag } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 
 export default function CTA() {
   return (
@@ -38,13 +38,6 @@ export default function CTA() {
               <Phone size={24} />
               Nous appeler
             </a>
-          </div>
-
-          {/* Code promo */}
-          <div className="mt-8 inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border-2 border-white/30">
-            <Tag size={20} className="text-amber-400" />
-            <span className="text-sm">Code promo : </span>
-            <span className="font-black text-xl text-amber-400 tracking-wider">BIENVENUE20</span>
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 px-4">
