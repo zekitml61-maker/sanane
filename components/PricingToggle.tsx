@@ -348,6 +348,17 @@ export default function PricingToggle() {
           </div>
         </div>
 
+        {/* Badge offre lancement global - En haut à droite */}
+        {activeTab === 'subscription' && (
+          <div className="flex justify-end mb-4">
+            <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg text-sm sm:text-base font-black shadow-2xl relative overflow-hidden">
+              <span className="relative z-10">-10% Offre lancement</span>
+              {/* Effet K2000 */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-k2000" style={{ filter: 'blur(2px)' }}></span>
+            </div>
+          </div>
+        )}
+
         {/* Grille des offres avec animation - Mobile optimisé */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {currentOffers.map((offer, index) => (
@@ -364,16 +375,7 @@ export default function PricingToggle() {
                 </div>
               )}
 
-              <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative overflow-visible`}>
-                {/* Badge offre lancement */}
-                {activeTab === 'subscription' && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-black shadow-2xl z-20 relative overflow-hidden">
-                    <span className="relative z-10">-10% Offre lancement</span>
-                    {/* Effet K2000 */}
-                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-k2000" style={{ filter: 'blur(2px)' }}></span>
-                  </div>
-                )}
-                
+              <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative`}>
                 <offer.icon size={40} className="mb-3 md:w-12 md:h-12" />
                 <h3 className="text-lg md:text-2xl font-bold mb-2">{offer.name}</h3>
                 
