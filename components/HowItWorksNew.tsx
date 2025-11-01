@@ -73,7 +73,6 @@ const steps: Step[] = [
 export default function HowItWorksNew() {
   const [scrollProgress, setScrollProgress] = useState<{ [key: number]: number }>({});
   const [completedCards, setCompletedCards] = useState<Set<number>>(new Set());
-  const [connectionProgress, setConnectionProgress] = useState<{ [key: number]: number }>({});
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -130,13 +129,6 @@ export default function HowItWorksNew() {
         }
         
         setScrollProgress(prev => ({ ...prev, [index]: progress }));
-        
-        // Calculer le progress de connexion vers la carte suivante
-        if (index < cardRefs.current.length - 1) {
-          // La ligne de connexion commence à se dessiner quand la carte actuelle atteint 80%
-          const connectionProg = Math.max(0, Math.min(100, (progress - 80) * 5));
-          setConnectionProgress(prev => ({ ...prev, [index]: connectionProg }));
-        }
       });
     };
 
@@ -245,23 +237,6 @@ export default function HowItWorksNew() {
                     </linearGradient>
                   </defs>
                 </svg>
-                
-                {/* Ligne de connexion vers carte suivante - Mobile uniquement */}
-                {index < steps.length - 1 && (
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full md:hidden pointer-events-none">
-                    {/* Ligne principale */}
-                    <div 
-                      style={{
-                        width: '1px',
-                        height: `${(connectionProgress[index] || 0) * 0.8}px`,
-                        maxHeight: '80px',
-                        background: 'linear-gradient(to bottom, rgb(14, 165, 233), rgb(59, 130, 246), rgb(96, 165, 250))',
-                        transition: 'height 0.15s ease-out',
-                        boxShadow: connectionProgress[index] > 50 ? '0 0 4px rgba(14, 165, 233, 0.3)' : 'none'
-                      }}
-                    ></div>
-                  </div>
-                )}
                 
                 {/* Badge */}
                 <div className={`inline-block px-3 py-1 ${step.badgeColor} rounded-full text-xs font-bold mb-4`}>
