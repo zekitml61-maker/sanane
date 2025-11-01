@@ -249,14 +249,37 @@ export default function HowItWorksNew() {
                 {/* Ligne de connexion vers carte suivante - Mobile uniquement */}
                 {index < steps.length - 1 && (
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full md:hidden pointer-events-none">
+                    {/* Ligne principale */}
                     <div 
-                      className="w-0.5 bg-gradient-to-b from-primary-500 to-blue-500"
+                      className="relative w-1 bg-gradient-to-b from-primary-500 via-blue-500 to-blue-400 rounded-full"
                       style={{
-                        height: `${(connectionProgress[index] || 0) * 0.4}px`,
-                        maxHeight: '40px',
-                        transition: 'height 0.1s ease-out'
+                        height: `${(connectionProgress[index] || 0) * 0.8}px`,
+                        maxHeight: '80px',
+                        transition: 'height 0.15s ease-out',
+                        boxShadow: connectionProgress[index] > 50 ? '0 0 10px rgba(14, 165, 233, 0.5)' : 'none'
                       }}
-                    ></div>
+                    >
+                      {/* Effet de brillance qui descend */}
+                      {connectionProgress[index] > 0 && (
+                        <div 
+                          className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rounded-full animate-pulse"
+                          style={{
+                            opacity: Math.min(1, connectionProgress[index] / 50),
+                            boxShadow: '0 0 8px rgba(255, 255, 255, 0.8)'
+                          }}
+                        ></div>
+                      )}
+                      
+                      {/* Point lumineux au bout */}
+                      {connectionProgress[index] > 80 && (
+                        <div 
+                          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-blue-400 rounded-full"
+                          style={{
+                            boxShadow: '0 0 6px rgba(59, 130, 246, 0.8)'
+                          }}
+                        ></div>
+                      )}
+                    </div>
                   </div>
                 )}
                 
