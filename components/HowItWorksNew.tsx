@@ -299,7 +299,6 @@ export default function HowItWorksNew() {
             href="#tarifs"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-blue-600 text-white px-10 py-5 rounded-full text-xl font-bold hover:scale-105 active:scale-95 transition-all shadow-2xl hover:shadow-primary-500/50"
           >
-            <span>🚀</span>
             <span>Commencer maintenant</span>
           </a>
         </div>
