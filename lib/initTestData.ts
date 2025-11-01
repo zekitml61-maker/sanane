@@ -25,6 +25,8 @@ export function initTestClient() {
     postalCode: '84110',
     clientType: 'subscription' as const,
     subscriptionPlan: 'confort' as const,
+    joinDate: new Date().toISOString(),
+    active: true,
   };
 
   const client = createClient(testClient);
