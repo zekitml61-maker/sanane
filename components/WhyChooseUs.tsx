@@ -1,4 +1,4 @@
-import { Clock, DollarSign, Package, Shield } from 'lucide-react';
+import { Clock, TrendingDown, Package, Shield, ArrowDown } from 'lucide-react';
 
 export default function WhyChooseUs() {
   return (
@@ -24,23 +24,23 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bloc économique principal */}
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-2xl mx-auto mb-16">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-primary-200 relative overflow-hidden">
             {/* Effet brillant */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
             
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-3 mb-8">
-                <DollarSign className="text-primary-600" size={40} />
+                <TrendingDown className="text-primary-600" size={40} />
                 <h3 className="text-3xl md:text-4xl font-black text-gray-900">
                   Faites des économies réelles
                 </h3>
               </div>
 
-              {/* Comparaison */}
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Comparaison verticale */}
+              <div className="flex flex-col items-center gap-6">
                 {/* Avant */}
-                <div className="text-center p-6 bg-red-50 rounded-2xl border-2 border-red-200">
+                <div className="text-center p-6 bg-red-50 rounded-2xl border-2 border-red-200 w-full max-w-md">
                   <p className="text-sm font-semibold text-red-700 mb-2 uppercase tracking-wide">
                     Pressing traditionnel
                   </p>
@@ -56,18 +56,16 @@ export default function WhyChooseUs() {
                   </p>
                 </div>
 
-                {/* Flèche */}
-                <div className="hidden md:flex items-center justify-center">
-                  <div className="text-6xl font-black text-primary-600 animate-bounce-slow">
-                    →
-                  </div>
+                {/* Flèche vers le bas */}
+                <div className="flex items-center justify-center">
+                  <ArrowDown className="text-primary-600 animate-bounce" size={48} strokeWidth={3} />
                 </div>
 
                 {/* Après */}
-                <div className="text-center p-6 bg-gradient-to-br from-green-50 to-primary-50 rounded-2xl border-2 border-green-300 relative">
+                <div className="text-center p-6 bg-gradient-to-br from-green-50 to-primary-50 rounded-2xl border-2 border-green-300 relative w-full max-w-md">
                   {/* Badge "Meilleur prix" */}
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse">
-                    🔥 Meilleur prix
+                    Meilleur prix
                   </div>
                   
                   <p className="text-sm font-semibold text-green-700 mb-2 uppercase tracking-wide">
@@ -88,8 +86,8 @@ export default function WhyChooseUs() {
 
               {/* Économie */}
               <div className="mt-8 text-center">
-                <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-8 py-4 rounded-full shadow-xl">
-                  <p className="text-sm font-semibold mb-1">💰 Économies mensuelles</p>
+                <div className="inline-block bg-gradient-to-r from-green-500 to-primary-600 text-white px-8 py-4 rounded-full shadow-xl">
+                  <p className="text-sm font-semibold mb-1">Économies mensuelles</p>
                   <p className="text-4xl font-black">Jusqu'à 33€ !</p>
                 </div>
               </div>

@@ -16,56 +16,56 @@ const steps: Step[] = [
   {
     number: 1,
     icon: Package,
-    title: '🏠 Livraison de votre panier',
+    title: 'Livraison de votre panier',
     description: 'Nous livrons gratuitement votre panier C\'Propre directement à domicile. Prêt à l\'emploi !',
     badge: 'Livraison offerte',
-    color: 'from-blue-400 to-blue-600',
-    badgeColor: 'bg-blue-100 text-blue-700',
+    color: 'from-primary-500 to-primary-600',
+    badgeColor: 'bg-primary-100 text-primary-700',
   },
   {
     number: 2,
     icon: Shirt,
-    title: '👕 Vous remplissez le panier',
+    title: 'Vous remplissez le panier',
     description: 'Déposez votre linge sale dans le panier à votre rythme. Simple et pratique !',
     badge: 'À votre rythme',
-    color: 'from-green-400 to-green-600',
-    badgeColor: 'bg-green-100 text-green-700',
+    color: 'from-blue-500 to-blue-600',
+    badgeColor: 'bg-blue-100 text-blue-700',
   },
   {
     number: 3,
     icon: Truck,
-    title: '🚚 Collecte tous les lundis',
+    title: 'Collecte tous les lundis',
     description: 'Chaque lundi, nos livreurs récupèrent votre panier rempli. Vous n\'avez rien à faire !',
     badge: 'Tous les lundis',
-    color: 'from-orange-400 to-orange-600',
-    badgeColor: 'bg-orange-100 text-orange-700',
+    color: 'from-primary-500 to-primary-600',
+    badgeColor: 'bg-primary-100 text-primary-700',
   },
   {
     number: 4,
     icon: Sparkles,
-    title: '✨ Traitement professionnel',
+    title: 'Traitement professionnel',
     description: 'Lavage, séchage, détachage, repassage et pliage impeccable. Tout est fait pour vous !',
     badge: 'Service complet',
-    color: 'from-purple-400 to-purple-600',
-    badgeColor: 'bg-purple-100 text-purple-700',
+    color: 'from-blue-500 to-blue-600',
+    badgeColor: 'bg-blue-100 text-blue-700',
   },
   {
     number: 5,
     icon: Bell,
-    title: '📦 Livraison avec suivi',
+    title: 'Livraison avec suivi',
     description: 'Réception de votre panier avec notification + photo dans votre espace client. Tranquillité garantie !',
     badge: 'Suivi en temps réel',
-    color: 'from-indigo-400 to-indigo-600',
-    badgeColor: 'bg-indigo-100 text-indigo-700',
+    color: 'from-primary-500 to-primary-600',
+    badgeColor: 'bg-primary-100 text-primary-700',
   },
   {
     number: 6,
     icon: Trophy,
-    title: '🎉 Vous avez tout gagné !',
-    description: 'Économie de temps ⏰, économie d\'argent 💰, et zéro chaussettes mystérieusement disparues ! 🧦✨',
+    title: 'Vous avez tout gagné !',
+    description: 'Économie de temps, économie d\'argent, et zéro chaussettes mystérieusement disparues !',
     badge: 'Mission accomplie',
-    color: 'from-yellow-400 to-yellow-600',
-    badgeColor: 'bg-yellow-100 text-yellow-700',
+    color: 'from-blue-500 to-blue-600',
+    badgeColor: 'bg-blue-100 text-blue-700',
   },
 ];
 
@@ -97,12 +97,8 @@ export default function HowItWorksNew() {
           >
             <defs>
               <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#60a5fa" />
-                <stop offset="20%" stopColor="#34d399" />
-                <stop offset="40%" stopColor="#fb923c" />
-                <stop offset="60%" stopColor="#a78bfa" />
-                <stop offset="80%" stopColor="#6366f1" />
-                <stop offset="100%" stopColor="#fbbf24" />
+                <stop offset="0%" stopColor="#0ea5e9" />
+                <stop offset="100%" stopColor="#3b82f6" />
               </linearGradient>
             </defs>
             
@@ -111,18 +107,12 @@ export default function HowItWorksNew() {
               d="M 200 150 L 600 150 L 1000 150 L 1000 400 L 600 400 L 200 400 L 200 650"
               fill="none"
               stroke="url(#lineGradient)"
-              strokeWidth="4"
+              strokeWidth="3"
               strokeLinecap="round"
               strokeDasharray="2000"
               strokeDashoffset="2000"
               className="animate-drawLine"
             />
-            
-            {/* Flèches directionnelles */}
-            <polygon points="595,145 605,150 595,155" fill="#34d399" className="animate-fadeIn" style={{ animationDelay: '1s' }} />
-            <polygon points="995,395 1005,400 995,405" fill="#fb923c" className="animate-fadeIn" style={{ animationDelay: '2s' }} />
-            <polygon points="605,405 595,400 605,395" fill="#a78bfa" className="animate-fadeIn" style={{ animationDelay: '3s' }} />
-            <polygon points="205,645 200,635 195,645" fill="#fbbf24" className="animate-fadeIn" style={{ animationDelay: '4s' }} />
           </svg>
 
           {/* Grille 3x2 */}
@@ -146,12 +136,10 @@ export default function HowItWorksNew() {
                 </div>
 
                 {/* Icône */}
-                <div className="relative mb-6">
+                <div className="mb-6">
                   <div className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl`}>
                     <Icon className="text-white" size={36} />
                   </div>
-                  {/* Point lumineux */}
-                  <div className={`absolute top-0 right-0 w-3 h-3 bg-gradient-to-br ${step.color} rounded-full animate-ping`}></div>
                 </div>
 
                 {/* Titre */}
@@ -163,9 +151,6 @@ export default function HowItWorksNew() {
                 <p className="text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
-
-                {/* Ligne décorative */}
-                <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${step.color} group-hover:w-full transition-all duration-700`}></div>
               </div>
               );
             })}

@@ -353,10 +353,10 @@ export default function PricingToggle() {
           {currentOffers.map((offer, index) => (
             <div
               key={`${activeTab}-${index}`}
-              className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl md:hover:-translate-y-3 transition-all duration-300 animate-fadeInUp flex flex-col ${
+              className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl md:hover:-translate-y-3 transition-all duration-300 animate-fadeInUp flex flex-col ${
                 offer.popular ? 'ring-2 md:ring-4 ring-primary-500 md:scale-105' : ''
               }`}
-              style={{ animationDelay: `${index * 0.1}s`, opacity: 0 }}
+              style={{ animationDelay: `${index * 0.1}s`, opacity: 0, overflow: 'visible' }}
             >
               {offer.popular && (
                 <div className="absolute top-0 right-0 bg-primary-500 text-white px-3 py-1.5 md:px-6 md:py-2 rounded-bl-2xl font-semibold text-xs md:text-sm">
@@ -364,11 +364,11 @@ export default function PricingToggle() {
                 </div>
               )}
 
-              <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative`}>
+              <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative overflow-visible`}>
                 {/* Badge offre lancement */}
                 {activeTab === 'subscription' && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-xl animate-pulse z-10">
-                    🔥 -10% Offre lancement
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-primary-600 to-blue-600 text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold shadow-xl animate-pulse z-20">
+                    -10% Offre lancement
                   </div>
                 )}
                 
