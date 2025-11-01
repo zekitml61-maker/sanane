@@ -83,7 +83,6 @@ export default function PricingToggle() {
         'Nettoyage pressing premium',
         'Détachage expert inclus',
         'Service client prioritaire',
-        'Emballage écologique',
       ],
       popular: true,
       type: 'subscription'
