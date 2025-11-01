@@ -35,8 +35,8 @@ export default function Hero() {
             </p>
             
             {/* 3 blocs explicatifs - Côte à côte mobile */}
-            <div className="flex gap-3 md:gap-6 max-w-4xl mx-auto animate-fadeInUp overflow-x-auto px-4 pb-2 scrollbar-hide" style={{ animationDelay: '0.3s', opacity: 0 }}>
-              <div className="flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1 min-w-[110px] flex-shrink-0">
+            <div className="flex gap-2 md:gap-6 max-w-4xl mx-auto animate-fadeInUp px-4 pb-2" style={{ animationDelay: '0.3s', opacity: 0 }}>
+              <div className="flex flex-col items-center text-center p-3 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1">
                 <div className="bg-white/90 p-3 rounded-full mb-3 animate-float">
                   <Truck className="text-primary-600" size={28} />
                 </div>
@@ -48,7 +48,7 @@ export default function Hero() {
                 </p>
               </div>
               
-              <div className="flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1 min-w-[110px] flex-shrink-0" style={{ animationDelay: '0.1s' }}>
+              <div className="flex flex-col items-center text-center p-3 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1" style={{ animationDelay: '0.1s' }}>
                 <div className="bg-white/90 p-3 rounded-full mb-3 animate-float" style={{ animationDelay: '0.3s' }}>
                   <Sparkles className="text-primary-600" size={28} />
                 </div>
@@ -60,7 +60,7 @@ export default function Hero() {
                 </p>
               </div>
               
-              <div className="flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1 min-w-[110px] flex-shrink-0" style={{ animationDelay: '0.2s' }}>
+              <div className="flex flex-col items-center text-center p-3 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1" style={{ animationDelay: '0.2s' }}>
                 <div className="bg-white/90 p-3 rounded-full mb-3 animate-float" style={{ animationDelay: '0.6s' }}>
                   <Home className="text-primary-600" size={28} />
                 </div>
