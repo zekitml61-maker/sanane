@@ -158,6 +158,19 @@ body {
     animation: progressBar 10s linear infinite;
   }
   
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+  
   @keyframes float-premium {
     0%, 100% {
       transform: translateY(0px) scale(1);

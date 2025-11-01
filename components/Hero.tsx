@@ -4,7 +4,7 @@ import { Truck, Sparkles, Home } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden min-h-screen">
+    <section className="relative pt-40 pb-20 overflow-hidden min-h-screen">
       {/* Vidéo plein écran en arrière-plan */}
       <div className="absolute inset-0 z-0">
         <video
