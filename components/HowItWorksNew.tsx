@@ -71,28 +71,39 @@ const steps: Step[] = [
 ];
 
 export default function HowItWorksNew() {
-  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const [scrollProgress, setScrollProgress] = useState<{ [key: number]: number }>({});
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = parseInt(entry.target.getAttribute('data-index') || '0');
-          if (entry.isIntersecting) {
-            console.log('Card visible:', index);
-            setVisibleCards(prev => [...new Set([...prev, index])]);
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: '0px' }
-    );
+    const handleScroll = () => {
+      cardRefs.current.forEach((card, index) => {
+        if (!card) return;
 
-    cardRefs.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
+        const rect = card.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calcul du pourcentage de visibilité
+        // 0% = carte en bas de l'écran, 100% = carte en haut de l'écran
+        const cardTop = rect.top;
+        const cardHeight = rect.height;
+        
+        // La carte commence à se remplir quand elle entre dans la vue
+        // et finit à 100% quand elle atteint le haut
+        let progress = 0;
+        
+        if (cardTop < windowHeight && cardTop > -cardHeight) {
+          // Calcul du progress: 0 quand en bas, 100 quand en haut
+          progress = Math.min(100, Math.max(0, ((windowHeight - cardTop) / (windowHeight + cardHeight)) * 100));
+        }
+        
+        setScrollProgress(prev => ({ ...prev, [index]: progress }));
+      });
+    };
 
-    return () => observer.disconnect();
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -144,18 +155,26 @@ export default function HowItWorksNew() {
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step: Step, index: number) => {
               const Icon = step.icon;
-              const isVisible = visibleCards.includes(index);
+              const progress = scrollProgress[index] || 0;
+              const dashOffset = 400 - (progress / 100) * 400; // Circonférence bordure
+              
               return (
               <div
                 key={index}
                 ref={(el) => { cardRefs.current[index] = el; }}
                 data-index={index}
-                className={`group rounded-3xl p-8 hover:shadow-2xl animate-fadeInUp ${
-                  isVisible ? 'card-border-active' : 'card-border-inactive'
-                }`}
+                className="group relative bg-white rounded-3xl p-8 hover:shadow-2xl animate-fadeInUp overflow-hidden"
                 style={{ 
                   animationDelay: `${index * 0.15}s`, 
-                  opacity: 0
+                  opacity: 0,
+                  border: '3px solid transparent',
+                  borderImage: `linear-gradient(90deg, 
+                    rgb(14, 165, 233) 0%, 
+                    rgb(14, 165, 233) ${progress}%, 
+                    rgb(229, 231, 235) ${progress}%, 
+                    rgb(229, 231, 235) 100%) 1`,
+                  boxShadow: progress > 50 ? `0 0 ${progress * 0.3}px rgba(14, 165, 233, ${progress / 200})` : 'none',
+                  transition: 'box-shadow 0.1s ease-out'
                 }}
               >
                 {/* Badge */}
