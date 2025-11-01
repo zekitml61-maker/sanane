@@ -90,12 +90,14 @@ export default function HowItWorksNew() {
         
         // La carte est visible dans la fenêtre
         if (cardBottom > 0 && cardTop < windowHeight) {
-          // Distance totale que la carte parcourt dans la fenêtre
+          // La carte entre dans la vue depuis le bas
+          // Commence à 0% quand le bas de la carte touche le bas de l'écran
+          // Atteint 100% quand le haut de la carte touche le haut de l'écran
+          
+          // Distance totale que la carte parcourt
           const totalDistance = windowHeight;
           
-          // Distance parcourue (de bas d'écran jusqu'à position actuelle)
-          // Quand cardBottom = windowHeight (entre juste) → distance = 0
-          // Quand cardTop = 0 (sort en haut) → distance = windowHeight
+          // Distance parcourue depuis l'entrée dans la vue
           const traveledDistance = windowHeight - cardTop;
           
           // Calcul du pourcentage (0% à 100%)
@@ -112,6 +114,17 @@ export default function HowItWorksNew() {
                 return newSet;
               });
             }, 600);
+          }
+        } else {
+          // Carte hors de vue → reset progress à 0
+          progress = 0;
+          // Retirer des cartes complétées si elle sort de la vue
+          if (completedCards.has(index)) {
+            setCompletedCards(prev => {
+              const newSet = new Set(prev);
+              newSet.delete(index);
+              return newSet;
+            });
           }
         }
         
