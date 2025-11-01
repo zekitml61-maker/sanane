@@ -353,7 +353,7 @@ export default function PricingToggle() {
           {currentOffers.map((offer, index) => (
             <div
               key={`${activeTab}-${index}`}
-              className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl md:hover:-translate-y-3 transition-all duration-300 animate-fadeInUp flex flex-col ${
+              className={`relative bg-white rounded-3xl shadow-xl hover:shadow-2xl md:hover:-translate-y-3 transition-all duration-300 animate-fadeInUp flex flex-col ${
                 offer.popular ? 'ring-2 md:ring-4 ring-primary-500 md:scale-105' : ''
               }`}
               style={{ animationDelay: `${index * 0.1}s`, opacity: 0, overflow: 'visible' }}
