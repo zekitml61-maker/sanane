@@ -350,10 +350,10 @@ export default function PricingToggle() {
 
         {/* Grille des offres avec animation - Mobile optimisé */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-          {/* Badge offre lancement - À cheval sur le bord droit */}
+          {/* Badge offre lancement - Centré au-dessus des 3 formules */}
           {activeTab === 'subscription' && (
-            <div className="absolute -top-6 right-0 translate-x-1/2 z-30">
-              <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg text-sm sm:text-base font-black shadow-2xl relative overflow-hidden">
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-30">
+              <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg text-sm sm:text-base font-black shadow-2xl relative overflow-hidden whitespace-nowrap">
                 <span className="relative z-10">-10% Offre lancement</span>
                 {/* Effet K2000 */}
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-k2000" style={{ filter: 'blur(2px)' }}></span>
