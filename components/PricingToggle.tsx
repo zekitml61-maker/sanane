@@ -121,7 +121,7 @@ export default function PricingToggle() {
       features: [
         'Panier de 15 litres',
         'Collecte à domicile',
-        'Livraison sous 7 jours',
+        'Livraison sous 48h',
         'Suivi en temps réel',
         'Nettoyage pressing standard',
         'Paiement à la livraison',
@@ -139,7 +139,7 @@ export default function PricingToggle() {
       features: [
         'Panier de 30 litres',
         'Collecte à domicile',
-        'Livraison sous 7 jours',
+        'Livraison sous 48h',
         'Suivi en temps réel',
         'Nettoyage pressing premium',
         'Détachage expert inclus',
@@ -158,7 +158,7 @@ export default function PricingToggle() {
       features: [
         'Panier de 50 litres',
         'Collecte à domicile',
-        'Livraison sous 7 jours',
+        'Livraison express 24h',
         'Suivi en temps réel',
         'Nettoyage pressing VIP',
         'Détachage expert inclus',
