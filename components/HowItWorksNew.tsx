@@ -209,8 +209,7 @@ export default function HowItWorksNew() {
                     strokeDasharray="2000"
                     strokeDashoffset={2000 - (progress / 100) * 2000}
                     style={{ 
-                      transition: 'stroke-dashoffset 0.1s ease-out',
-                      filter: isCompleted ? 'drop-shadow(0 0 8px rgba(14, 165, 233, 0.8))' : 'none'
+                      transition: 'stroke-dashoffset 0.1s ease-out'
                     }}
                     className={isCompleted ? 'animate-flash-border' : ''}
                   />
