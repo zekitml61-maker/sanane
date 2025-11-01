@@ -113,7 +113,7 @@ export default function WhyChooseUs() {
           {/* Argument 2 */}
           <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary-300 group">
             <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <DollarSign className="text-white" size={28} />
+              <TrendingDown className="text-white" size={28} />
             </div>
             <h4 className="text-xl font-bold text-gray-900 mb-2">
               Prix transparent
