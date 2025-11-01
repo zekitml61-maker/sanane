@@ -175,15 +175,21 @@ body {
     0% {
       border-color: rgb(229, 231, 235); /* gray-200 */
       box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+      border-width: 2px;
+    }
+    50% {
+      border-color: rgb(96, 165, 250); /* blue-400 */
+      box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
     }
     100% {
       border-color: rgb(14, 165, 233); /* primary-500 */
-      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+      box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+      border-width: 3px;
     }
   }
   
   .border-fill-animation {
-    animation: borderFill 0.8s ease-out forwards;
+    animation: borderFill 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   @keyframes float-premium {

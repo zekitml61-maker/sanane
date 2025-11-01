@@ -80,11 +80,12 @@ export default function HowItWorksNew() {
         entries.forEach((entry) => {
           const index = parseInt(entry.target.getAttribute('data-index') || '0');
           if (entry.isIntersecting) {
+            console.log('Card visible:', index);
             setVisibleCards(prev => [...new Set([...prev, index])]);
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2, rootMargin: '0px' }
     );
 
     cardRefs.current.forEach((card) => {
