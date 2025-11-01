@@ -259,7 +259,7 @@ export default function HowItWorksNew() {
                         transition: 'height 0.15s ease-out',
                         boxShadow: connectionProgress[index] > 50 ? '0 0 4px rgba(14, 165, 233, 0.3)' : 'none'
                       }}
-                    >
+                    ></div>
                   </div>
                 )}
                 
