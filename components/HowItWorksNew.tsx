@@ -214,14 +214,14 @@ export default function HowItWorksNew() {
                     className={isCompleted ? 'animate-flash-border' : ''}
                   />
                   
-                  {/* Étoile blanche au point de départ (coin supérieur gauche) */}
+                  {/* Étoile dorée au point de départ (coin supérieur gauche) */}
                   {isCompleted && (
                     <g className="animate-star-sparkle" style={{ transformOrigin: '24px 24px' }}>
                       <path
                         d="M 24 18 L 26 22 L 30 23 L 27 26 L 28 30 L 24 28 L 20 30 L 21 26 L 18 23 L 22 22 Z"
-                        fill="white"
-                        stroke="rgb(14, 165, 233)"
-                        strokeWidth="0.5"
+                        fill="rgb(250, 204, 21)"
+                        stroke="rgb(234, 179, 8)"
+                        strokeWidth="1"
                       />
                     </g>
                   )}
