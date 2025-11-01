@@ -32,8 +32,8 @@ export default function WhyChooseUs() {
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-3 mb-8">
                 <TrendingDown className="text-primary-600" size={40} />
-                <h3 className="text-3xl md:text-4xl font-black text-gray-900">
-                  Faites des économies réelles
+                <h3 className="text-2xl md:text-4xl font-black text-gray-900">
+                  Faites des<br className="md:hidden" /> économies réelles
                 </h3>
               </div>
 
