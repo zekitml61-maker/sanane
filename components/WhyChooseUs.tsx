@@ -85,8 +85,8 @@ export default function WhyChooseUs() {
               </div>
 
               {/* Économie - Aligné avec les cartes */}
-              <div className="mt-8 w-full text-center">
-                <div className="inline-block w-full bg-gradient-to-r from-green-500/10 to-primary-600/10 border-2 border-green-500 text-gray-900 px-6 py-3 rounded-2xl">
+              <div className="mt-8">
+                <div className="w-full p-6 bg-gradient-to-r from-green-500/10 to-primary-600/10 border-2 border-green-500 rounded-2xl text-center">
                   <p className="text-sm font-semibold text-green-700">Économies mensuelles</p>
                   <p className="text-3xl font-black text-green-600">Jusqu'à 33€</p>
                 </div>
