@@ -367,8 +367,10 @@ export default function PricingToggle() {
               <div className={`bg-gradient-to-r ${offer.color} p-6 text-white relative overflow-visible`}>
                 {/* Badge offre lancement */}
                 {activeTab === 'subscription' && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-xs sm:text-sm font-black shadow-2xl animate-bounce z-20 border-2 border-white">
-                    -10% Offre lancement
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-black shadow-2xl z-20 relative overflow-hidden">
+                    <span className="relative z-10">-10% Offre lancement</span>
+                    {/* Effet K2000 */}
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-k2000" style={{ filter: 'blur(2px)' }}></span>
                   </div>
                 )}
                 
