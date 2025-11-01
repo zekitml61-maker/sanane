@@ -1,7 +1,6 @@
 'use client';
 
 import { Truck, Sparkles, Home } from 'lucide-react';
-import LaunchOffer from './LaunchOffer';
 
 export default function Hero() {
   return (
@@ -36,7 +35,7 @@ export default function Hero() {
             </p>
             
             {/* 3 blocs explicatifs */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12 animate-fadeInUp px-4" style={{ animationDelay: '0.3s', opacity: 0 }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fadeInUp px-4" style={{ animationDelay: '0.3s', opacity: 0 }}>
               <div className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="bg-white/90 p-4 rounded-full mb-4 animate-float">
                   <Truck className="text-primary-600" size={36} />
@@ -72,11 +71,6 @@ export default function Hero() {
                   Retour de votre linge impeccable sous 48h
                 </p>
               </div>
-            </div>
-
-            {/* Offre de lancement */}
-            <div className="max-w-3xl mx-auto px-4">
-              <LaunchOffer />
             </div>
           </div>
         </div>

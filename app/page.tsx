@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import LaunchOfferBanner from '@/components/LaunchOfferBanner';
 import HowItWorksNew from '@/components/HowItWorksNew';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Features from '@/components/Features';
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
+      <LaunchOfferBanner />
       <Hero />
       <HowItWorksNew />
       <WhyChooseUs />

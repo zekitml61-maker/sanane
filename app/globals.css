@@ -115,6 +115,21 @@ body {
     animation: drawLine 6s ease-out forwards;
   }
   
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  .animate-slideDown {
+    animation: slideDown 0.5s ease-out;
+  }
+  
   @keyframes float-premium {
     0%, 100% {
       transform: translateY(0px) scale(1);
