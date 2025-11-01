@@ -1,6 +1,6 @@
 'use client';
 
-import { Package, ShirtFolded, Truck, Sparkles, Bell, Trophy, LucideIcon } from 'lucide-react';
+import { Package, Shirt, Truck, Sparkles, Bell, Trophy, LucideIcon } from 'lucide-react';
 
 interface Step {
   number: number;
@@ -24,7 +24,7 @@ const steps: Step[] = [
   },
   {
     number: 2,
-    icon: ShirtFolded,
+    icon: Shirt,
     title: '👕 Vous remplissez le panier',
     description: 'Déposez votre linge sale dans le panier à votre rythme. Simple et pratique !',
     badge: 'À votre rythme',
