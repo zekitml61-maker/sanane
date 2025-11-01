@@ -43,7 +43,6 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-4">Informations</h4>
             <ul className="space-y-3 text-gray-400">
               <li><a href="/#tarifs" className="hover:text-white transition">Nos formules</a></li>
-              <li><a href="/#suivi" className="hover:text-white transition">Suivre ma commande</a></li>
               <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
               <li><a href="/conditions-generales" className="hover:text-white transition">Conditions générales</a></li>
               <li><a href="/mentions-legales" className="hover:text-white transition">Mentions légales</a></li>
