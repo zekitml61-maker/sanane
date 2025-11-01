@@ -392,7 +392,7 @@ export default function PricingToggle() {
                 ) : (
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-3xl md:text-5xl font-bold">{offer.price}€</span>
-                    <span className="text-sm md:text-xl opacity-90">/cmd</span>
+                    <span className="text-sm md:text-xl opacity-90">/panier</span>
                   </div>
                 )}
                 
