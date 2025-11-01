@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[56vh]">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-end min-h-[56vh]">
         <div className="w-full">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8 animate-fadeInUp">
