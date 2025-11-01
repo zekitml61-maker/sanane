@@ -162,19 +162,41 @@ export default function HowItWorksNew() {
                 key={index}
                 ref={(el) => { cardRefs.current[index] = el; }}
                 data-index={index}
-                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:shadow-2xl animate-fadeInUp overflow-hidden"
+                className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:shadow-2xl animate-fadeInUp overflow-visible"
                 style={{ 
                   animationDelay: `${index * 0.15}s`, 
                   opacity: 0
                 }}
               >
-                {/* Barre de progression horizontale en haut - Mobile uniquement */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200 md:hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-primary-500 to-blue-500 transition-all duration-100"
-                    style={{ width: `${progress}%` }}
-                  ></div>
-                </div>
+                {/* SVG bordure qui se remplit - Mobile uniquement */}
+                <svg 
+                  className="absolute inset-0 w-full h-full pointer-events-none md:hidden" 
+                  style={{ 
+                    borderRadius: '1.5rem',
+                    overflow: 'visible'
+                  }}
+                >
+                  <rect
+                    x="1"
+                    y="1"
+                    width="calc(100% - 2px)"
+                    height="calc(100% - 2px)"
+                    rx="24"
+                    ry="24"
+                    fill="none"
+                    stroke={`url(#gradient-${index})`}
+                    strokeWidth="3"
+                    strokeDasharray="2000"
+                    strokeDashoffset={2000 - (progress / 100) * 2000}
+                    style={{ transition: 'stroke-dashoffset 0.1s ease-out' }}
+                  />
+                  <defs>
+                    <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="rgb(14, 165, 233)" />
+                      <stop offset="100%" stopColor="rgb(59, 130, 246)" />
+                    </linearGradient>
+                  </defs>
+                </svg>
                 {/* Badge */}
                 <div className={`inline-block px-3 py-1 ${step.badgeColor} rounded-full text-xs font-bold mb-4`}>
                   {step.badge}
