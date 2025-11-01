@@ -40,7 +40,7 @@ export default function CTA() {
             </a>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4">
+          <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 px-4 max-w-lg mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">50</div>
               <p className="text-white/80 text-sm sm:text-base">Clients</p>
@@ -48,10 +48,6 @@ export default function CTA() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">98%</div>
               <p className="text-white/80 text-sm sm:text-base">Satisfaction client</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">24/7</div>
-              <p className="text-white/80 text-sm sm:text-base">Service disponible</p>
             </div>
           </div>
         </div>
