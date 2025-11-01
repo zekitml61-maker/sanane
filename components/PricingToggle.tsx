@@ -63,7 +63,6 @@ export default function PricingToggle() {
         'Livraison sous 48h',
         'Suivi QR Code en temps réel',
         'Nettoyage pressing standard',
-        'Service client prioritaire',
       ],
       popular: false,
       type: 'subscription'
