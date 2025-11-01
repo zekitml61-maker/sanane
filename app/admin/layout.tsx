@@ -61,12 +61,7 @@ export default function AdminLayout({
   }
 
   const navigation = [
-    { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
-    { name: 'Clients', href: '/admin/clients', icon: Users },
-    { name: 'Collectes du Jour', href: '/admin/collectes-du-jour', icon: CheckCircle },
-    { name: 'Suivi Commandes', href: '/admin/commandes-suivi', icon: Package },
-    { name: 'Scanner', href: '/admin/scanner', icon: QrCode },
-    { name: 'Paramètres', href: '/admin/parametres', icon: Settings },
+    { name: 'Mes Commandes', href: '/admin/mes-commandes', icon: Package },
   ];
 
   return (
