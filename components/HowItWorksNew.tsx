@@ -191,55 +191,7 @@ export default function HowItWorksNew() {
             />
           </svg>
 
-          {/* SVG pour les lignes de connexion - Mobile uniquement */}
-          <svg 
-            className="absolute inset-0 w-full h-full pointer-events-none md:hidden" 
-            style={{ zIndex: 5 }}
-          >
-            {steps.map((_, index) => {
-              if (index >= steps.length - 1) return null;
-              
-              const currentCard = cardRefs.current[index];
-              const nextCard = cardRefs.current[index + 1];
-              
-              if (!currentCard || !nextCard) return null;
-              
-              const currentRect = currentCard.getBoundingClientRect();
-              const nextRect = nextCard.getBoundingClientRect();
-              const containerRect = currentCard.parentElement?.parentElement?.getBoundingClientRect();
-              
-              if (!containerRect) return null;
-              
-              // Positions relatives au conteneur
-              const startX = currentRect.left + currentRect.width / 2 - containerRect.left;
-              const startY = currentRect.bottom - containerRect.top;
-              const endX = nextRect.left + nextRect.width / 2 - containerRect.left;
-              const endY = nextRect.top - containerRect.top;
-              
-              const connProg = connectionProgress[index] || 0;
-              const pathLength = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
-              
-              return (
-                <line
-                  key={`connection-${index}`}
-                  x1={startX}
-                  y1={startY}
-                  x2={startX + (endX - startX) * (connProg / 100)}
-                  y2={startY + (endY - startY) * (connProg / 100)}
-                  stroke="url(#connection-gradient)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  style={{ transition: 'all 0.1s ease-out' }}
-                />
-              );
-            })}
-            <defs>
-              <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="rgb(14, 165, 233)" />
-                <stop offset="100%" stopColor="rgb(59, 130, 246)" />
-              </linearGradient>
-            </defs>
-          </svg>
+
 
           {/* Grille 3x2 */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -293,6 +245,21 @@ export default function HowItWorksNew() {
                     </linearGradient>
                   </defs>
                 </svg>
+                
+                {/* Ligne de connexion vers carte suivante - Mobile uniquement */}
+                {index < steps.length - 1 && (
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full md:hidden pointer-events-none">
+                    <div 
+                      className="w-0.5 bg-gradient-to-b from-primary-500 to-blue-500"
+                      style={{
+                        height: `${(connectionProgress[index] || 0) * 0.4}px`,
+                        maxHeight: '40px',
+                        transition: 'height 0.1s ease-out'
+                      }}
+                    ></div>
+                  </div>
+                )}
+                
                 {/* Badge */}
                 <div className={`inline-block px-3 py-1 ${step.badgeColor} rounded-full text-xs font-bold mb-4`}>
                   {step.badge}
