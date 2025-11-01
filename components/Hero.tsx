@@ -37,7 +37,7 @@ export default function Hero() {
             {/* 3 blocs explicatifs - Côte à côte mobile */}
             <div className="flex gap-2 md:gap-6 max-w-4xl mx-auto animate-fadeInUp px-4 pb-2" style={{ animationDelay: '0.3s', opacity: 0 }}>
               <div className="flex flex-col items-center text-center p-3 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1">
-                <div className="bg-white/90 p-3 rounded-full mb-3 animate-float">
+                <div className="bg-white/90 p-3 rounded-full mb-3">
                   <Truck className="text-primary-600" size={28} />
                 </div>
                 <h3 className="text-sm md:text-xl font-bold text-white mb-0 md:mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
@@ -49,7 +49,7 @@ export default function Hero() {
               </div>
               
               <div className="flex flex-col items-center text-center p-3 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1" style={{ animationDelay: '0.1s' }}>
-                <div className="bg-white/90 p-3 rounded-full mb-3 animate-float" style={{ animationDelay: '0.3s' }}>
+                <div className="bg-white/90 p-3 rounded-full mb-3">
                   <Sparkles className="text-primary-600" size={28} />
                 </div>
                 <h3 className="text-sm md:text-xl font-bold text-white mb-0 md:mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
@@ -61,7 +61,7 @@ export default function Hero() {
               </div>
               
               <div className="flex flex-col items-center text-center p-3 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 flex-1" style={{ animationDelay: '0.2s' }}>
-                <div className="bg-white/90 p-3 rounded-full mb-3 animate-float" style={{ animationDelay: '0.6s' }}>
+                <div className="bg-white/90 p-3 rounded-full mb-3">
                   <Home className="text-primary-600" size={28} />
                 </div>
                 <h3 className="text-sm md:text-xl font-bold text-white mb-0 md:mb-2" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
