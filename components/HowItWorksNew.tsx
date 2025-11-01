@@ -1,8 +1,18 @@
 'use client';
 
-import { Package, ShirtFolded, Truck, Sparkles, Bell, Trophy } from 'lucide-react';
+import { Package, ShirtFolded, Truck, Sparkles, Bell, Trophy, LucideIcon } from 'lucide-react';
 
-const steps = [
+interface Step {
+  number: number;
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  badge: string;
+  color: string;
+  badgeColor: string;
+}
+
+const steps: Step[] = [
   {
     number: 1,
     icon: Package,
@@ -117,7 +127,9 @@ export default function HowItWorksNew() {
 
           {/* Grille 3x2 */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {steps.map((step, index) => (
+            {steps.map((step: Step, index: number) => {
+              const Icon = step.icon;
+              return (
               <div
                 key={index}
                 className="group relative bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-500 animate-fadeInUp"
@@ -136,7 +148,7 @@ export default function HowItWorksNew() {
                 {/* Icône */}
                 <div className="relative mb-6">
                   <div className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl`}>
-                    <step.icon className="text-white" size={36} />
+                    <Icon className="text-white" size={36} />
                   </div>
                   {/* Point lumineux */}
                   <div className={`absolute top-0 right-0 w-3 h-3 bg-gradient-to-br ${step.color} rounded-full animate-ping`}></div>
@@ -155,7 +167,8 @@ export default function HowItWorksNew() {
                 {/* Ligne décorative */}
                 <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${step.color} group-hover:w-full transition-all duration-700`}></div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
