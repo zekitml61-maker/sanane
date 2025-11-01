@@ -20,7 +20,7 @@ export default function CTA() {
             Prêt à simplifier votre quotidien ?
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto px-4">
-            Rejoignez plus de 250 clients satisfaits qui ont choisi C'Propre pour leur pressing
+            Rejoignez plus de 50 clients satisfaits qui ont choisi C'Propre pour leur pressing
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
