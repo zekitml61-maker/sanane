@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
             Un service qui fait la différence
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez pourquoi des milliers de clients nous font confiance
+            Découvrez pourquoi nos clients nous font confiance
           </p>
         </div>
 
