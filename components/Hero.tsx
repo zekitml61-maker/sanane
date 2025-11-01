@@ -25,11 +25,11 @@ export default function Hero() {
         <div className="w-full">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8 animate-fadeInUp">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center px-4" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center px-4">
                 Votre pressing <span className="text-primary-300">professionnel</span> à domicile
               </h1>
             </div>
-            <p className="text-lg sm:text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto font-semibold animate-fadeInUp px-4" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)', animationDelay: '0.2s', opacity: 0 }}>
+            <p className="text-lg sm:text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto font-semibold animate-fadeInUp px-4" style={{ animationDelay: '0.2s', opacity: 0 }}>
               Collecte chaque lundi, nettoyage impeccable, livraison rapide. 
               Suivez vos vêtements en temps réel avec notre système QR code.
             </p>
